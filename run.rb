@@ -80,7 +80,7 @@ end
 # Construct the logger object
 LOG_BOT = Discordrb::Bot.new(
   token: LOGIN_TOKEN,
-  application_id: APP_ID,
+  client_id: APP_ID,
   type: LOGIN_TYPE,
   parse_self: true
 )
@@ -125,8 +125,14 @@ LOG_BOT.message_edit do |event|
   log_message(details, event.channel.private?, true)
 end
 
-# Catch SIGINT/SITERM and shutdown
+# When the bot is connected.
+LOG_BOT.ready do
+  LOG_BOT.invisible if HIDE_STATUS
+end
+
+# Catch SIGINT/SIGTERM and shutdown
 def shutdown_bot
+  LOG_BOT.invisible
   LOG_BOT.stop
   exit
 end

@@ -1,5 +1,5 @@
 # If running on a user account:
-#   Get login token by ctrl+shift+i, console, localStorage.token
+#   Get login token by ctrl+shift+i -> Application -> Local Storage -> discordap.com -> token
 # If running on a bot account:
 #   Get login token from your app's page on the Discord developer site
 LOGIN_TOKEN = ''.freeze
@@ -19,3 +19,7 @@ LOG_DIR = 'logs/'.freeze
 # Whether or not timestamps should use the UTC timezone.
 # If true, timestamps will use UTC. Otherwise, they will use local time.
 USE_UTC = true
+
+# If true, your status icon will be displayed as normal.
+# Otherwhise, you will always show as Online.
+HIDE_STATUS = true

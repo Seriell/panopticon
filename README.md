@@ -1,8 +1,7 @@
-# Announcement
+# About Fork
 
-Development of Panopticon has shifted to utilizing discord.py. Currently this is on a `python` branch, but in due time I will be pushing the changes to master.
-
-I highly recommend that any users of Panopticon switch to this new version.
+Since the original Panopticon project is no longer maintained, I have decided to pick it up where it left off with Ruby/Discordrb, and enhancing and maintaining it (As well as including the features the Python version had.)
+All credit goes to the original creator.
 
 # Panopticon
 
