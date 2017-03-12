@@ -23,3 +23,6 @@ USE_UTC = true
 # If true, your status icon will be displayed as normal.
 # Otherwhise, you will always show as Online.
 HIDE_STATUS = true
+
+# Array of Server IDs, target servers won't be logged.
+BLACKLISTED_SERVERS = [206934458954153984]

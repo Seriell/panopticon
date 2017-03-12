@@ -87,6 +87,7 @@ LOG_BOT = Discordrb::Bot.new(
 
 # Message sent
 LOG_BOT.message do |event|
+	next if BLACKLISTED_SERVERS.include(event.server.id)
   details = {
     channel_id: event.message.channel.id,
     message_id: Base64.strict_encode64([event.message.id].pack('L<')),
@@ -107,6 +108,7 @@ end
 
 # Message edited
 LOG_BOT.message_edit do |event|
+	next if BLACKLISTED_SERVERS.include(event.server.id)
   details = {
     channel_id: event.message.channel.id,
     message_id: Base64.strict_encode64([event.message.id].pack('L<')),
